@@ -8,8 +8,60 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./usuario/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./usuario/cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'meu-avanco',
+    loadChildren: () => import('./usuario/meu-avanco/meu-avanco.module').then( m => m.MeuAvancoPageModule)
+  },
+  {
+    path: 'contando-estrelas',
+    loadChildren: () => import('./jogosMat/contando-estrelas/contando-estrelas.module').then( m => m.ContandoEstrelasPageModule)
+  },
+  {
+    path: 'cont-a',
+    loadChildren: () => import('./jogosMat/cont-a/cont-a.module').then( m => m.ContAPageModule)
+  },
+  {
+    path: 'cont-b',
+    loadChildren: () => import('./jogosMat/cont-b/cont-b.module').then( m => m.ContBPageModule)
+  },
+  {
+    path: 'mat-index',
+    loadChildren: () => import('./jogosMat/mat-index/mat-index.module').then( m => m.MatIndexPageModule)
+  },
+  {
+    path: 'salada-frutas',
+    loadChildren: () => import('./jogosMat/salada-frutas/salada-frutas.module').then( m => m.SaladaFrutasPageModule)
+  },
+  {
+    path: 'log-index',
+    loadChildren: () => import('./jogosLog/log-index/log-index.module').then( m => m.LogIndexPageModule)
+  },
+  {
+    path: 'port-index',
+    loadChildren: () => import('./jogosPort/port-index/port-index.module').then( m => m.PortIndexPageModule)
+  },
+  {
+    path: 'sal-a',
+    loadChildren: () => import('./jogosMat/sal-a/sal-a.module').then( m => m.SalAPageModule)
+  },
+  {
+    path: 'sal-b',
+    loadChildren: () => import('./jogosMat/sal-b/sal-b.module').then( m => m.SalBPageModule)
+  },
+  {
+    path: 'sal-c',
+    loadChildren: () => import('./jogosMat/sal-c/sal-c.module').then( m => m.SalCPageModule)
   },
 ];
 

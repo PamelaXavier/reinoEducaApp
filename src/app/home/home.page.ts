@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController, ActionSheetController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,22 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public alertController: AlertController,
+
+    private menu: MenuController) {}
+
+  async presentAlert(titulo: string, corpo: string) { //Alert da história do app
+    const alert = await this.alertController.create({
+      header: titulo,
+      message: corpo,
+      buttons:  ['Vamos lá!']
+    });
+
+    await alert.present();
+  }
+
+  
+ 
 
 }
+
